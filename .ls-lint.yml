@@ -1,0 +1,10 @@
+ls:
+  .dir: kebab-case
+  .md: kebab-case | regex:[0-9A-Z\-]+
+
+ignore:
+  - .git
+  - node_modules
+  - .github
+  - .vscode
+  - accessibility_report

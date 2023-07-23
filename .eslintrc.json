@@ -1,0 +1,217 @@
+{
+	"plugins": ["jsdoc", "prefer-arrow", "boundaries", "sonarjs", "disable"],
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true
+	},
+	"processor": "disable/disable",
+	"overrides": [
+		{
+			"files": ["**/utils/**/*.js"],
+			"env": {
+				"browser": false
+			}
+		},
+		{
+			"files": ["**/api-calls/**/*.js"],
+			"env": {
+				"browser": false
+			},
+			"globals": {
+				"fetch": true
+			}
+		},
+		{
+			"files": ["*.spec.js"],
+			"rules": {
+				"no-magic-numbers": 0,
+				"no-undefined": 0
+			},
+			"settings": {
+				"disable/plugins": ["sonarjs"]
+			},
+			"env": {
+				"jest": true
+			}
+		},
+		{
+			"files": ["sandbox.js"],
+			"rules": {
+				"no-magic-numbers": 0,
+				"no-console": 0,
+				"no-unused-expressions": 0,
+				"no-lone-blocks": 0,
+				"jsdoc/require-jsdoc": 0,
+				"no-undefined": 0,
+				"no-unused-vars": 0
+			},
+			"settings": {
+				"disable/plugins": ["sonarjs"]
+			},
+			"env": {
+				"jest": true
+			}
+		}
+	],
+	"ignorePatterns": ["dev-scripts/*.js"],
+	"extends": [
+		"eslint:recommended",
+		"airbnb-base",
+		"plugin:boundaries/strict",
+		"plugin:sonarjs/recommended"
+	],
+	"rules": {
+		"no-var": 1,
+		"prefer-const": 1,
+		"no-extra-parens": 1,
+		"no-unreachable-loop": 1,
+		"eqeqeq": 1,
+		"no-implicit-coercion": 1,
+		"no-implicit-globals": 1,
+		"no-lone-blocks": 1,
+		"no-return-assign": 1,
+		"no-unused-expressions": 1,
+		"no-useless-computed-key": 1,
+		"no-useless-rename": 1,
+		"no-label-var": 1,
+		"no-shadow": 1,
+		"no-undefined": 1,
+		"arrow-parens": 1,
+		"arrow-body-style": 0,
+		"no-confusing-arrow": 1,
+		"vars-on-top": 0,
+		"no-plusplus": 0,
+		"guard-for-in": 0,
+		"no-unmodified-loop-condition": 1,
+		"no-warning-comments": 1,
+		"no-invalid-this": 1,
+		"prefer-destructuring": 1,
+		"no-nested-ternary": 0,
+		"no-restricted-syntax": [
+			0,
+			{
+				"selector": "ForInStatement"
+			},
+			{
+				"selector": "ForOfStatement"
+			}
+		],
+		"camelcase": [2, { "properties": "never" }],
+
+		"prefer-arrow/prefer-arrow-functions": ["warn"],
+
+		"boundaries/element-types": [
+			2,
+			{
+				"default": "disallow",
+				"rules": [
+					{ "from": "api-calls", "allow": ["utils", "constants", "api-calls"] },
+					{
+						"from": "components",
+						"allow": ["components", "utils", "constants", "custom-events"]
+					},
+					{
+						"from": "custom-events",
+						"allow": ["constants", "utils", "custom-events"]
+					},
+					{
+						"from": "handlers",
+						"allow": [
+							"constants",
+							"custom-events",
+							"state",
+							"api-calls",
+							"components",
+							"handlers",
+							"listeners",
+							"utils",
+							"procedures"
+						]
+					},
+					{ "from": "listeners", "allow": ["handlers", "constants", "utils"] },
+					{ "from": "utils", "allow": ["utils"] },
+					{
+						"from": "procedures",
+						"allow": [
+							"constants",
+							"state",
+							"api-calls",
+							"components",
+							"handlers",
+							"listeners",
+							"utils",
+							"procedures",
+							"custom-events"
+						]
+					},
+
+					{
+						"from": "init",
+						"allow": ["constants", "listeners", "utils", "procedures"]
+					},
+					{
+						"from": "constants",
+						"allow": []
+					},
+					{
+						"from": "state",
+						"allow": []
+					}
+				]
+			}
+		],
+
+		"import/prefer-default-export": 0,
+		"import/named": 2,
+		"import/no-cycle": 0,
+		"import/extensions": [1, { "js": "always" }],
+
+		"jsdoc/check-alignment": 1,
+		"jsdoc/check-indentation": 1,
+		"jsdoc/check-line-alignment": 1,
+		"jsdoc/check-param-names": 1,
+		"jsdoc/check-syntax": 1,
+		"jsdoc/check-tag-names": 1,
+		"jsdoc/check-types": 1,
+		"jsdoc/check-values": 1,
+		"jsdoc/empty-tags": 1,
+		"jsdoc/newline-after-description": 1,
+		"jsdoc/no-bad-blocks": 1,
+		"jsdoc/no-undefined-types": 1,
+		"jsdoc/require-description": 1,
+		"jsdoc/require-description-complete-sentence": 1,
+		"jsdoc/require-hyphen-before-param-description": 1,
+		"jsdoc/require-jsdoc": 1,
+		"jsdoc/require-param": 1,
+		"jsdoc/require-param-description": 1,
+		"jsdoc/require-param-name": 1,
+		"jsdoc/require-param-type": 1,
+		"jsdoc/require-returns": 1,
+		"jsdoc/require-returns-check": 1,
+		"jsdoc/require-returns-description": 1,
+		"jsdoc/require-returns-type": 1,
+		"jsdoc/require-throws": 1,
+		"jsdoc/require-yields": 1,
+		"jsdoc/require-yields-check": 1,
+		"jsdoc/valid-types": 1
+	},
+
+	"settings": {
+		"boundaries/elements": [
+			{ "type": "api-calls", "pattern": "api-calls" },
+			{ "type": "components", "pattern": "components" },
+			{ "type": "custom-events", "pattern": "custom-events" },
+			{ "type": "handlers", "pattern": "handlers" },
+			{ "type": "listeners", "pattern": "listeners" },
+			{ "type": "utils", "pattern": "utils" },
+			{ "type": "procedures", "pattern": "procedures" },
+
+			{ "type": "init", "mode": "file", "pattern": "init.js" },
+			{ "type": "state", "mode": "file", "pattern": "data/state.js" },
+			{ "type": "constants", "mode": "file", "pattern": "data/constants.js" }
+		],
+		"boundaries/ignore": ["**/*.spec.js", "**/sandbox.js"]
+	}
+}
