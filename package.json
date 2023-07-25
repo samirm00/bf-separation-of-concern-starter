@@ -6,13 +6,7 @@
 		"test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
 		"format": "prettier --write ./client",
 		"format:check": "prettier --check ./client",
-		"spell-check": "cspell  './**'",
-		"lint:ls": "ls-lint",
-		"lint:md": "markdownlint --ignore node_modules --config ./.markdownlint.jsonc --fix ./ ",
-		"lint:css": "stylelint",
-		"lint:js": "eslint --max-warnings=0 --ext=.js --format=codeframe",
-		"validate:html": "html-validate",
-		"accessibility": "achecker"
+		"spell-check": "cspell  './**'"
 	},
 	"type": "module",
 	"repository": {
