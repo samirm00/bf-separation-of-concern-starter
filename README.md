@@ -1,6 +1,6 @@
-# Project name
+# Image gallery
 
-> A simple project
+> A simple
 
 ## Table of contents
 
@@ -15,11 +15,12 @@
 
 ## General info
 
-> The objective of the project
+> The objective of the project is to practice separation of concern in
+> JavaScript.
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/screenShot.png)
 
 ## Technologies
 
@@ -30,7 +31,7 @@
 
 ## Setup
 
-- clone the repo
+clone the repo and start using the stop watch.
 
 ## Code Examples
 
@@ -54,9 +55,3 @@ To-do list:
 ## Status
 
 Project is: _in progress_
-
-## Inspiration
-
-## Contact
-
-By [Your Name](link to your GitHub' account)
