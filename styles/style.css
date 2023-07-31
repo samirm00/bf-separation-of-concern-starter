@@ -7,6 +7,147 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: #5a5353;
     color: whitesmoke;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.to-do-list-form {
+    text-align: center;
+    width: 100%; /* Set the form to occupy the full width available in the parent */
+    max-width: 400px; /* Optional: Set a max-width for the form to limit its width */
+}
+
+.to-do-list-form h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-input-form {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #282c34;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #5cb1d6;
+}
+
+.tasks-container {
+    width: 100%; /* Set the tasks-container div to occupy the full width available in the parent */
+    max-width: 400px; /* Optional: Set a max-width for the tasks-container div to limit its width */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tasks-list-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    /* background-color: #444; */
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.added-task {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-between; /* Space the items evenly along the row */
+    align-items: center; /* Center items vertically within the row */
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.task-title {
+    margin: 0;
+    flex: 1; /* Allow the task title to grow and occupy the available space */
+    color: #fff;
+}
+
+.buttons-container {
+    display: flex; /* Use flexbox to align buttons in a row */
+}
+
+.edit-btn,
+.delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn i,
+.delete-btn i {
+    color: #61dafb;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.delete-btn i {
+    color: #e74c3c;
+}
+
+.task-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.clear-all-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.clear-all-btn:hover {
+    background-color: #d63024;
+}
+
+.error {
+    color: #721c24;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.error1 {
+    background-color: #ff0000;
+    color: #fff;
 }
