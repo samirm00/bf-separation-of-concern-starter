@@ -1,5 +1,7 @@
-const sum = (num1, num2) => {
-    return num1 + num2;
+import data from '../data.js';
+
+const sum = () => {
+    return data.num1 + data.num2;
 };
 
 export default sum;
