@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"format": "prettier --write ./",
-		"test": "jest"
+		"test": "jest --coverage"
 	},
 	"keywords": [],
 	"author": "",
