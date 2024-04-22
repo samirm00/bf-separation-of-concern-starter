@@ -1,9 +1,3 @@
 node_modules
-package.json
-package-lock.json
-prettierrc.json
-.babelrc
 coverage
-.eslintrc.json
-.gitignore
-.eslintignore
+assets

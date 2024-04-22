@@ -55,3 +55,7 @@ To-do list:
 ## Status
 
 Project is: _in progress_
+
+## Inspiration
+
+## Contact
