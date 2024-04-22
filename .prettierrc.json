@@ -10,21 +10,7 @@
 	"singleQuote": true,
 	"overrides": [
 		{
-			"files": "*.js",
-			"options": {
-				"tabWidth": 4,
-				"useTabs": false
-			}
-		},
-		{
-			"files": "*.css",
-			"options": {
-				"tabWidth": 4,
-				"useTabs": false
-			}
-		},
-		{
-			"files": "*.html",
+			"files": ["*.html", "*.css", "*.js"],
 			"options": {
 				"tabWidth": 4,
 				"useTabs": false

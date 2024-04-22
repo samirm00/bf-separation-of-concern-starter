@@ -1,6 +1,3 @@
-const data = {
-    num1: 1,
-    num2: 2,
-};
+const data = {};
 
 export default data;

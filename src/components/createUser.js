@@ -1,5 +1,3 @@
-
-
 const createUser = (userInfo) => {
     const container = document.createElement('div');
 
